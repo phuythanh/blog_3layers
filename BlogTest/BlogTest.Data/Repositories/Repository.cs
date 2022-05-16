@@ -17,11 +17,6 @@ namespace BlogTest.Data.Repositories
             _context = context;
             _dbSet = _context.Set<T>();
         }
-        public void Add(T entity)
-        {
-            _context.Add(entity);
-            _context.SaveChanges();
-        }
         public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
         {
             return _context.Set<T>().Where(expression);

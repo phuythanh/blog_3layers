@@ -3,6 +3,7 @@ using BlogTest.Data.Entities;
 using BlogTest.Data.Interfaces;
 using BlogTest.Service.Dtos;
 using BlogTest.Service.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -26,10 +27,17 @@ namespace BlogTest.Service.Services
             {
                 _repository.Insert(entity);
             }
-            else {
+            else
+            {
                 _repository.Update(entity);
             }
             return _mapper.Map<BlogDto>(entity);
+        }
+
+        public IEnumerable<BlogDto> Filter(DateTime from, DateTime to)
+        {
+            var blogs = _repository.Find(x => from <= x.CreatedDate && x.CreatedDate <= to).ToList();
+            return _mapper.Map<List<BlogDto>>(blogs);
         }
 
         public IEnumerable<BlogDto> GetAll()

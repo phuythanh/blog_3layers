@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace BlogTest.Data
+namespace BlogTest.Service.Dtos
 {
-    public class BaseEntity
+    public class BaseDto
     {
         public int Id { get; set; }
 

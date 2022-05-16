@@ -4,6 +4,7 @@ using BlogTest.Service.Dtos;
 using BlogTest.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 
 namespace BlogTest.Api.Controllers
@@ -28,6 +29,13 @@ namespace BlogTest.Api.Controllers
         public IEnumerable<BlogDto> Get()
         {
             return _blogService.GetAll();
+        }
+
+        [HttpGet]
+        [Route("filter")]
+        public IEnumerable<BlogDto> Filter(DateTime from, DateTime to)
+        {
+            return _blogService.Filter(from, to);
         }
 
         [HttpPost]
