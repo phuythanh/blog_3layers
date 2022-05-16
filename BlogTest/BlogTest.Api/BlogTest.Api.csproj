@@ -17,10 +17,6 @@
   <ItemGroup>
     <ProjectReference Include="..\BlogTest.Service\BlogTest.Service.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
   
   <PropertyGroup>
     <GenerateRuntimeConfigurationFiles>True</GenerateRuntimeConfigurationFiles>

@@ -19,6 +19,13 @@ namespace BlogTest.Service.Services
             _repository = repository;
         }
 
+        public BlogDto Create(BlogDto model)
+        {
+            var entity = _mapper.Map<BlogEntity>(model);
+            _repository.Insert(entity);
+            return _mapper.Map<BlogDto>(entity);
+        }
+
         public IEnumerable<BlogDto> GetAll()
         {
             var blogs =_repository.GetAll().ToList();

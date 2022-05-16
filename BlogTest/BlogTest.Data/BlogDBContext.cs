@@ -12,7 +12,7 @@ namespace BlogTest.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS; Database=QL_NhaMayTramDB; User=sa; Password=Qlk@123456");
+            optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS; Database=blog; User=sa; Password=Qlk@123456");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

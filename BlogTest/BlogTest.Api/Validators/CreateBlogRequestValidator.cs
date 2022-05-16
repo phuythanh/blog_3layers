@@ -1,4 +1,5 @@
-﻿using BlogTest.Service.Dtos;
+﻿using BlogTest.Api.Models;
+using BlogTest.Service.Dtos;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -7,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BlogTest.Api.Validators
 {
-    public class BlogRequestDtoValidator : AbstractValidator<BlogDto>
+    public class CreateBlogRequestValidator : AbstractValidator<CreateBlogRequest>
     {
-        public BlogRequestDtoValidator()
+        public CreateBlogRequestValidator()
         {
             RuleFor(x => x.Title).NotEmpty();
             RuleFor(x => x.Title).MaximumLength(200);

@@ -1,8 +1,8 @@
+using BlogTest.Api.Models;
 using BlogTest.Api.Validators;
 using BlogTest.Data;
 using BlogTest.Data.Interfaces;
 using BlogTest.Data.Repositories;
-using BlogTest.Service.Dtos;
 using BlogTest.Service.Interfaces;
 using BlogTest.Service.Services;
 using FluentValidation;
@@ -34,7 +34,7 @@ namespace BlogTest.Api
             services.AddTransient(typeof(IBlogService), typeof(BlogService));
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers().AddFluentValidation();
-            services.AddTransient<IValidator<BlogDto>, BlogRequestDtoValidator>();
+            services.AddTransient<IValidator<CreateBlogRequest>, CreateBlogRequestValidator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

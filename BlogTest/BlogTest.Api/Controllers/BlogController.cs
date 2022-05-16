@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BlogTest.Api.Models;
 using BlogTest.Service.Dtos;
 using BlogTest.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -27,6 +28,13 @@ namespace BlogTest.Api.Controllers
         public IEnumerable<BlogDto> Get()
         {
             return _blogService.GetAll();
+        }
+
+        [HttpPost]
+        public BlogDto Post(CreateBlogRequest request)
+        {
+            var model = _mapper.Map<BlogDto>(request);
+            return _blogService.Create(model);
         }
     }
 }

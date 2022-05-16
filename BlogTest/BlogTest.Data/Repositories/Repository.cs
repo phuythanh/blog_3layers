@@ -20,7 +20,7 @@ namespace BlogTest.Data.Repositories
         public void Add(T entity)
         {
             _context.Add(entity);
-            _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
         public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
         {
@@ -39,7 +39,7 @@ namespace BlogTest.Data.Repositories
         public T Insert(T entity)
         {
             _context.Set<T>().Add(entity);
-            _context.SaveChangesAsync();
+            _context.SaveChanges();
             return entity;
         }
 
@@ -50,11 +50,6 @@ namespace BlogTest.Data.Repositories
 
         }
 
-        public async void RemoveAsync(T entity)
-        {
-            _context.Remove(entity);
-            await _context.SaveChangesAsync();
-        }
 
         public T Update(T entity)
         {

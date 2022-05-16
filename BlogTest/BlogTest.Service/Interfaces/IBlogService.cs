@@ -8,5 +8,6 @@ namespace BlogTest.Service.Interfaces
     public interface IBlogService
     {
         IEnumerable<BlogDto> GetAll();
+        BlogDto Create(BlogDto model);
     }
 }
