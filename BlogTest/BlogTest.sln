@@ -3,16 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogTest.Service", "BlogTest.Service\BlogTest.Service.csproj", "{FBB3ACD5-B28B-4EDA-8399-2B348210B6B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTest.Service", "BlogTest.Service\BlogTest.Service.csproj", "{FBB3ACD5-B28B-4EDA-8399-2B348210B6B5}"
 	ProjectSection(ProjectDependencies) = postProject
 		{558CD808-D455-470D-810C-9FBAF35CB3F5} = {558CD808-D455-470D-810C-9FBAF35CB3F5}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogTest.Data", "BlogTest.Data\BlogTest.Data.csproj", "{558CD808-D455-470D-810C-9FBAF35CB3F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTest.Data", "BlogTest.Data\BlogTest.Data.csproj", "{558CD808-D455-470D-810C-9FBAF35CB3F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogTest.Api", "BlogTest.Api\BlogTest.Api.csproj", "{A23094A4-4B72-4CE2-ADB2-618862D1E554}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTest.Api", "BlogTest.Api\BlogTest.Api.csproj", "{A23094A4-4B72-4CE2-ADB2-618862D1E554}"
 	ProjectSection(ProjectDependencies) = postProject
 		{FBB3ACD5-B28B-4EDA-8399-2B348210B6B5} = {FBB3ACD5-B28B-4EDA-8399-2B348210B6B5}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "postman", "postman", "{759F7912-047D-4F0E-9F8F-FAEF4E2277D4}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\phuyt\OneDrive\Tài liệu\Blog Test.postman_collection.json = C:\Users\phuyt\OneDrive\Tài liệu\Blog Test.postman_collection.json
+		C:\Users\phuyt\OneDrive\Tài liệu\local.postman_environment.json = C:\Users\phuyt\OneDrive\Tài liệu\local.postman_environment.json
 	EndProjectSection
 EndProject
 Global

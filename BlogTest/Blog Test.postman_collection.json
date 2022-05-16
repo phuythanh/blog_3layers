@@ -1,0 +1,153 @@
+{
+	"id": "471c6362-769e-19c0-6ad9-51981f1ef252",
+	"name": "Blog Test",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"name": "Blog",
+			"description": "",
+			"collectionId": "471c6362-769e-19c0-6ad9-51981f1ef252",
+			"order": [
+				"49786627-52d1-c75b-ed48-5c809cd94318",
+				"245369f6-8d55-4919-3448-a7c25c04e98f",
+				"cd96f1d7-2753-6d44-9b89-843f7aeb4952",
+				"fab5be0d-edaf-0b08-024e-d23597d028ab"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "8721121b-7cc7-99ba-8eb4-599fa46012fd"
+		}
+	],
+	"folders_order": [
+		"8721121b-7cc7-99ba-8eb4-599fa46012fd"
+	],
+	"timestamp": 1652709153833,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "245369f6-8d55-4919-3448-a7c25c04e98f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/blog",
+			"folder": "8721121b-7cc7-99ba-8eb4-599fa46012fd",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1652710405290,
+			"name": "Create",
+			"description": "",
+			"collectionId": "471c6362-769e-19c0-6ad9-51981f1ef252",
+			"responses": [],
+			"rawModeData": "{\n\t\"title\":\"a4\",\n\t\"description\":\"a4 d\"\n}"
+		},
+		{
+			"id": "49786627-52d1-c75b-ed48-5c809cd94318",
+			"headers": "",
+			"headerData": [],
+			"url": "{{url}}/blog",
+			"folder": "8721121b-7cc7-99ba-8eb4-599fa46012fd",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1652710406835,
+			"name": "get all",
+			"description": "",
+			"collectionId": "471c6362-769e-19c0-6ad9-51981f1ef252",
+			"responses": []
+		},
+		{
+			"id": "cd96f1d7-2753-6d44-9b89-843f7aeb4952",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/blog/1",
+			"folder": "8721121b-7cc7-99ba-8eb4-599fa46012fd",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1652710403588,
+			"name": "update/{id}",
+			"description": "",
+			"collectionId": "471c6362-769e-19c0-6ad9-51981f1ef252",
+			"responses": [],
+			"rawModeData": "{\n\t\"title\":\"a15\",\n\t\"description\":\"a15 d\"\n}"
+		},
+		{
+			"id": "fab5be0d-edaf-0b08-024e-d23597d028ab",
+			"headers": "",
+			"headerData": [],
+			"url": "{{url}}/blog/filter?from=2022-01-01&to=2022-12-01",
+			"folder": "8721121b-7cc7-99ba-8eb4-599fa46012fd",
+			"queryParams": [
+				{
+					"key": "from",
+					"value": "2022-01-01",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "to",
+					"value": "2022-12-01",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1652710401539,
+			"name": "filter?{from}&{to}",
+			"description": "",
+			"collectionId": "471c6362-769e-19c0-6ad9-51981f1ef252",
+			"responses": []
+		}
+	]
+}
