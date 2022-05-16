@@ -19,17 +19,29 @@ namespace BlogTest.Service.Services
             _repository = repository;
         }
 
-        public BlogDto Create(BlogDto model)
+        public BlogDto CreateOrUpdate(BlogDto model)
         {
             var entity = _mapper.Map<BlogEntity>(model);
-            _repository.Insert(entity);
+            if (entity.Id == 0)
+            {
+                _repository.Insert(entity);
+            }
+            else {
+                _repository.Update(entity);
+            }
             return _mapper.Map<BlogDto>(entity);
         }
 
         public IEnumerable<BlogDto> GetAll()
         {
-            var blogs =_repository.GetAll().ToList();
+            var blogs = _repository.GetAll().ToList();
             return _mapper.Map<List<BlogDto>>(blogs);
+        }
+
+        public BlogDto GetById(int id)
+        {
+            var blog = _repository.GetById(id);
+            return _mapper.Map<BlogDto>(blog);
         }
     }
 }

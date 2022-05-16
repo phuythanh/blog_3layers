@@ -34,7 +34,16 @@ namespace BlogTest.Api.Controllers
         public BlogDto Post(CreateBlogRequest request)
         {
             var model = _mapper.Map<BlogDto>(request);
-            return _blogService.Create(model);
+            return _blogService.CreateOrUpdate(model);
+        }
+
+        [HttpPut]
+        [Route("{id:int}")]
+        public BlogDto Put(int id, CreateBlogRequest request)
+        {
+            var bogDetail = _blogService.GetById(id);
+            _mapper.Map(request, bogDetail);
+            return _blogService.CreateOrUpdate(bogDetail);
         }
     }
 }

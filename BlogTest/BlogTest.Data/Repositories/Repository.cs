@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 
 namespace BlogTest.Data.Repositories
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : BaseEntity
     {
         protected readonly BlogDBContext _context;
         protected readonly DbSet<T> _dbSet;
@@ -29,11 +29,11 @@ namespace BlogTest.Data.Repositories
 
         public IQueryable<T> GetAll()
         {
-            return _context.Set<T>().AsQueryable();
+            return _context.Set<T>().AsNoTracking().AsQueryable();
         }
         public T GetById(int id)
         {
-            return _context.Set<T>().Find(id);
+            return _context.Set<T>().AsNoTracking().Single(x => x.Id == id);
         }
 
         public T Insert(T entity)
