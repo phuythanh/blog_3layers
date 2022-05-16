@@ -15,10 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogTest.Api", "BlogTest.Ap
 		{FBB3ACD5-B28B-4EDA-8399-2B348210B6B5} = {FBB3ACD5-B28B-4EDA-8399-2B348210B6B5}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "postman", "postman", "{759F7912-047D-4F0E-9F8F-FAEF4E2277D4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Postman", "Postman", "{8575FDC2-3BCA-4E9D-A43F-521F000816DC}"
 	ProjectSection(SolutionItems) = preProject
-		C:\Users\phuyt\OneDrive\Tài liệu\Blog Test.postman_collection.json = C:\Users\phuyt\OneDrive\Tài liệu\Blog Test.postman_collection.json
-		C:\Users\phuyt\OneDrive\Tài liệu\local.postman_environment.json = C:\Users\phuyt\OneDrive\Tài liệu\local.postman_environment.json
+		Postman\Blog Test.postman_collection.json = Postman\Blog Test.postman_collection.json
+		Postman\local.postman_environment.json = Postman\local.postman_environment.json
 	EndProjectSection
 EndProject
 Global
