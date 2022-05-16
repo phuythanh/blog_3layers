@@ -12,6 +12,8 @@ namespace BlogTest.Api.Validators
         public BlogRequestDtoValidator()
         {
             RuleFor(x => x.Title).NotEmpty();
+            RuleFor(x => x.Title).MaximumLength(200);
+            RuleFor(x => x.Description).MaximumLength(500);
             //RuleFor(x => x.WeightTotal).GreaterThan(0);
             //RuleFor(x => x.WeightTotal).GreaterThan(0);
             //RuleFor(x => x.WeightCar).GreaterThan(0);
